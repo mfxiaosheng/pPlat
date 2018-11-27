@@ -36,6 +36,7 @@ public:
 	{
 		return (float)sqrt((x * x) + (y * y) + (z * z));
 	}
+	
 	float Distance(RVector3 b)
 	{
 		RVector3 vector = RVector3(x - b.x, y - b.y, z - b.z);
@@ -65,4 +66,4 @@ public:
 
 
 };
-#endif // kuçu korumasý
+#endif // kuÃ§u korumasÃ½
