@@ -8,6 +8,8 @@ class
 	DLLEXPORT SpellData
 {
 public:
+	
+	
 	static SpellData* FindSpell(char* spellName);
 	static SpellData* FindSpell(uint hash);
 	static int HashSpell(char* spellName);
