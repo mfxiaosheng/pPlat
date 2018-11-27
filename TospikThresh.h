@@ -5,6 +5,8 @@
 class TospikThresh : public pComponent
 {
 public:
+
+
 	bool bEnabled = true, bAutoQ = true,bAutoW=true;
 	bool bInited = false;
 	float sDelay = 0.1f, sSpeed = 0.25f;
@@ -115,7 +117,7 @@ public:
 
 				}
 				if (targetselector->target->HasBuff("threshq", true)) {
-					//Bütün takım arkadaşlarımı çek
+					//BÃ¼tÃ¼n takÃ½m arkadaÃ¾larÃ½mÃ½ Ã§ek
 					for (auto teamheroobj : ObjectManager::GetHeroes(ObjectManager::Allies))
 					{
 						auto hero = (Obj_Hero*)teamheroobj;
