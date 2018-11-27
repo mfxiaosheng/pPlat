@@ -17,7 +17,7 @@ public:
 		return *reinterpret_cast<DWORD**>(reinterpret_cast<DWORD*>(this + 0x34)); //+0x4
 	}
 
-	//TODO:Yarım kaldı len mq
+	//TODO:YarÃ½m kaldÃ½ len mq
 	char* GetNameFF()
 	{
 		IS_NULL_RETN(this, static_cast<int>(0x58), "Unknown");
@@ -27,6 +27,7 @@ public:
 
 		
 
+			
 		char* castorig = reinterpret_cast<char*>(this + 0x58);
 		if(strlen(castorig) <0x10)
 			castorig = *reinterpret_cast<char**>(this + 0x58);
@@ -191,7 +192,7 @@ public:
 		return this->GetSData()->GetName();
 	}*/
 };
-enum class SpellState // patlamştır mk kesin
+enum class SpellState // patlamÃ¾tÃ½r mk kesin
 {
 	//Possible flags
 
