@@ -11,6 +11,8 @@ public:
 	float totaldmg = 0;
 	int combokey = VK_SPACE, laneclearkey = 0x56, lasthitkey = 0x58, resetkey = VK_CAPITAL;
 
+
+
 	OrbWalker() { strcpy(classname, "OrbWalker"); strcpy(version, "0.0.3"); };
 	~OrbWalker() {};
 	DWORD movetimer, attacktimer;
@@ -60,7 +62,7 @@ public:
 	double CalcWindup()
 	{
 		typedef float(__cdecl* fnGetAttackDelay)(GameObject* pObj, int index);
-		fnGetAttackDelay stGet = reinterpret_cast<fnGetAttackDelay>(MAKE_RVA(Offsets::SpellHelper::ComputeCharacterAttackCastDelay)); // 83 ec ? 53 8b 5c ? ? 8b cb 56 ---- 2. ›NDEX 57 8B 7C 24 08 8B 87 ? ? ? ? 8D 8F ? ? ? ?
+		fnGetAttackDelay stGet = reinterpret_cast<fnGetAttackDelay>(MAKE_RVA(Offsets::SpellHelper::ComputeCharacterAttackCastDelay)); // 83 ec ? 53 8b 5c ? ? 8b cb 56 ---- 2. √ùNDEX 57 8B 7C 24 08 8B 87 ? ? ? ? 8D 8F ? ? ? ?
 		float delay = stGet((GameObject*)ObjectManager::GetPlayer(), 1);
 		float pDelay = delay * 2.0f;
 		//ENGINE_MSG("Windup  %f , pDelay : %f\n", delay, pDelay);
@@ -372,7 +374,7 @@ public:
 				}
 				else
 				{
-					Orbwalk(nullptr, false); // hedef yoksa d¸z y¸r¸
+					Orbwalk(nullptr, false); // hedef yoksa d√ºz y√ºr√º
 				}
 			}
 
