@@ -4,16 +4,17 @@ Obj_AI_Base* GetAttackableUnitByNetworkID(uint id)
 {
 	return  (Obj_AI_Base*)MAKEPTR(Offsets::ObjectManager::LocalPlayer);
 }
-#ifdef yedekamanhayarramýyesinbuyedekolsunamk
+#ifdef yedekamanhayarramÄ±yesinbuyedekolsunamk
 BuffInstance* BuffInstance::GetBuffPtr(uint netID)
 {
-	auto ptr = GetAttackableUnitByNetworkID(netID);// attackable unit by network yapýlacak
+	auto ptr = GetAttackableUnitByNetworkID(netID);// attackable unit by network yapÄ±lacak
 	if (ptr != nullptr)
 	{
 
 		auto buffBegin = *ptr->GetBegin();
 		auto buffEnd = *ptr->GetEnd();
 
+		
 		if (buffBegin != nullptr && buffEnd != nullptr)
 		{
 			for (uint32_t i = 0; i < (buffEnd - buffBegin) / sizeof(BuffInstance); i++)
@@ -44,7 +45,7 @@ BuffInstance* BuffInstance::GetBuffPtr(uint netID)
 std::vector<BuffInstance*> BuffInstance::GetBuffList(GameObject*ptrin)
 {
 	std::vector<BuffInstance*> bufflist;
-	auto ptr = reinterpret_cast<Obj_AI_Base*>(ptrin);//GetAttackableUnitByNetworkID(netid);// attackable unit by network yapýlacak
+	auto ptr = reinterpret_cast<Obj_AI_Base*>(ptrin);//GetAttackableUnitByNetworkID(netid);// attackable unit by network yapÄ±lacak
 	if (ptr != nullptr)
 	{
 
@@ -87,7 +88,7 @@ std::vector<RVector3*> Obj_AI_Base::GetPathList()
 std::vector<RVector3*> Obj_AI_Base::GetPathList(Obj_AI_Base*ptrin)
 {
 	std::vector<RVector3*> bufflist;
-	auto ptr = ptrin;//GetAttackableUnitByNetworkID(netid);// attackable unit by network yapýlacak
+	auto ptr = ptrin;//GetAttackableUnitByNetworkID(netid);// attackable unit by network yapÄ±lacak
 	if (ptr != nullptr)
 	{
 		auto aim = *ptr->GetAIManager_Client();
