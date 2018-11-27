@@ -11,6 +11,8 @@ public:
 		z = 0;
 	}
 
+
+
 	RVector3(D3DXVECTOR3 vec)
 	{
 		x = vec.x;
