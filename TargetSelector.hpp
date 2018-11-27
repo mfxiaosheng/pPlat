@@ -5,6 +5,8 @@
 class TargetSelector : public pComponent
 {
 public:
+
+
 	bool bEnabled = true;
 	bool bInited = false;
 	 Obj_AI_Base * target=nullptr;
@@ -36,11 +38,11 @@ public:
 
 		if (forcetarget != nullptr)
 			if (!forcetarget->isValid() || !*forcetarget->GetVisible())
-				forcetarget = nullptr; // seçilmiş hedef ölüyse veya visible değilse nulle 
+				forcetarget = nullptr; // seÃ§ilmiÃ¾ hedef Ã¶lÃ¼yse veya visible deÃ°ilse nulle 
 
 		if (target != nullptr)
 			if (!target->isValid() || !*target->GetVisible())
-				target = nullptr; // seçilmiş hedef ölüyse veya visible değilse nulle 
+				target = nullptr; // seÃ§ilmiÃ¾ hedef Ã¶lÃ¼yse veya visible deÃ°ilse nulle 
 	}
 
 
